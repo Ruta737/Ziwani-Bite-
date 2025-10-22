@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ziwani Bites</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center text-center py-16 px-6">
+      <!-- Logo and Title Row -->
+      <div class="flex items-center space-x-4 mb-6">
+        <img
+          src="Logo (1).png"
+          alt="Ziwani Bites Logo"
+          class="w-20 h-auto"
+        />
+        <h1 class="text-4xl font-bold">Ziwani Bites</h1>
+      </div>
+
+      <p class="text-lg max-w-xl mb-6">
+        Freshly fried sardines, prepared locally and delivered to your doorstep
+        in Dar es Salaam.
+      </p>
+      <a
+        href="https://wa.me/255"
+        class="px-6 py-3 rounded-2xl shadow-lg font-medium text-white bg-black"
+        >Order on WhatsApp</a
+      >
+    </section>
+
+    <!-- About Section -->
+    <section class="py-12 px-6 bg-gray-50 rounded-t-3xl text-center">
+      <h2 class="text-2xl font-semibold mb-3">About Ziwani Bites</h2>
+      <p class="max-w-2xl mx-auto text-base">
+        We proudly craft locally sourced fried sardines, made fresh daily with
+        authentic coastal flavor — delivering affordable, tasty protein to homes
+        in Dar es Salaam.
+      </p>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-12 px-6 text-center">
+      <h2 class="text-2xl font-semibold mb-6">Why Choose Us</h2>
+      <div class="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+        <div class="p-4 rounded-2xl bg-gray-50 shadow-sm">
+          Always freshly prepared
+        </div>
+        <div class="p-4 rounded-2xl bg-gray-50 shadow-sm">
+          Locally sourced ingredients
+        </div>
+        <div class="p-4 rounded-2xl bg-gray-50 shadow-sm">
+          Affordable for every home
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="py-12 px-6 text-center bg-white">
+      <h2 class="text-2xl font-semibold mb-4">Our Signature Pack</h2>
+      <p class="text-base mb-4">
+        750g crispy fried sardines — only TSh 5,000
+      </p>
+      <a
+        href="https://wa.me/255"
+        class="px-6 py-3 rounded-2xl shadow-md font-medium text-white bg-black"
+        >Order Now on WhatsApp</a
+      >
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-12 px-6 bg-gray-50 text-center">
+      <h2 class="text-2xl font-semibold mb-6">What Our Customers Say</h2>
+      <div class="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+        <div class="p-4 rounded-2xl bg-white shadow-sm">
+          <img
+            src="https://via.placeholder.com/80"
+            alt="Customer"
+            class="mx-auto rounded-full mb-3"
+          />
+          <p class="italic">“Super fresh and tasty! My family loved it.”</p>
+          <h4 class="mt-2 font-semibold">Amina, Masaki</h4>
+        </div>
+        <div class="p-4 rounded-2xl bg-white shadow-sm">
+          <img
+            src="https://via.placeholder.com/80"
+            alt="Customer"
+            class="mx-auto rounded-full mb-3"
+          />
+          <p class="italic">
+            “Fast delivery and amazing flavor. Highly recommended!”
+          </p>
+          <h4 class="mt-2 font-semibold">Juma, Mikocheni</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 text-center bg-white border-t">
+      <p class="mb-2 font-medium">Dar es Salaam — Delivery 8AM to 8PM daily</p>
+      <a
+        href="https://wa.me/255"
+        class="px-6 py-3 rounded-2xl shadow-md font-medium text-white bg-black"
+        >Order on WhatsApp</a
+      >
+      <p class="mt-4 text-sm text-gray-500">
+        © <span id="year"></span> Ziwani Bites. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
