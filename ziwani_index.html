@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziwani Bites</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+<div id="root"></div>
+<script type="text/babel">
+function App(){
+  const phone = '255766570257';
+  const [qty,setQty] = React.useState(0);
+  const orderViaWhatsApp = () => {
+    if(qty<=0){ alert('Please select at least one quantity.'); return; }
+    const message = `Hi Ziwani Bites!%0A%0AI’d like to order:%0A- ${qty} x Ziwani Pack (750g)`;
+    window.open(`https://wa.me/${phone}?text=${message}`); };
+  return(
+    <div className="min-h-screen font-sans">
+      <section className="text-center py-16 px-6 bg-white">
+        <img src="Logo (1).png" alt="Ziwani Bites Logo" className="w-32 mx-auto mb-4" />
+        <h1 className="text-4xl font-bold mb-4">Ziwani Bites</h1>
+        <p className="text-lg max-w-xl mx-auto mb-6">Freshly fried sardines, prepared locally and delivered to your doorstep in Dar es Salaam.</p>
+      </section>
+      <section className="py-12 px-6 bg-gray-50 text-center">
+        <h2 className="text-2xl font-semibold mb-4">Our Signature Pack</h2>
+        <p className="text-base mb-4">750g crispy fried sardines — only TSh 5,000</p>
+        <div className="flex justify-center items-center gap-4 mb-4">
+          <label>Qty:
+            <select value={qty} onChange={e=>setQty(e.target.value)} className="border p-2 ml-2">
+              {[...Array(11).keys()].map(n=> <option key={n} value={n}>{n}</option>)}
+            </select>
+          </label>
+          <button onClick={orderViaWhatsApp} className="px-6 py-3 rounded-2xl shadow-md font-medium text-white bg-black">Add to WhatsApp</button>
+        </div>
+      </section>
+      <section className="py-12 px-6 text-center">
+        <h2 className="text-2xl font-semibold mb-6">Why Choose Us</h2>
+        <div className="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+          <div className="p-4 rounded-2xl bg-gray-50 shadow-sm">Always freshly prepared</div>
+          <div className="p-4 rounded-2xl bg-gray-50 shadow-sm">Locally sourced ingredients</div>
+          <div className="p-4 rounded-2xl bg-gray-50 shadow-sm">Affordable for every home</div>
+        </div>
+      </section>
+      <footer className="py-10 px-6 text-center bg-white border-t">
+        <p className="mb-2 font-medium">Dar es Salaam — Delivery 8AM to 8PM daily</p>
+        <button onClick={()=>window.open(`https://wa.me/${phone}`)} className="px-6 py-3 rounded-2xl shadow-md font-medium text-white bg-black">Order on WhatsApp</button>
+        <p className="mt-4 text-sm text-gray-500">© {new Date().getFullYear()} Ziwani Bites. All rights reserved.</p>
+      </footer>
+    </div>
+  ); }
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
